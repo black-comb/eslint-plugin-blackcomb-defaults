@@ -30,11 +30,15 @@ npm install @angular-eslint/eslint-plugin @angular-eslint/eslint-plugin-template
 
 ## Usage
 
-Add `blackcomb-defaults` to the plugins section of your `.eslintrc` configuration file and the desired configuration to the extends array. You can omit the `eslint-plugin-` prefix:
+Add the desired `blackcomb-defaults` configuration to the extends property of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
 ```json
 {
-  "plugins": ["blackcomb-defaults"],
   "extends": ["plugin:blackcomb-defaults/typescript"]
 }
 ```
+
+The following configurations are available:
+* javascript
+* typescript
+* angular
