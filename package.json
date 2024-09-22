@@ -30,24 +30,33 @@
     "test": "mocha tests --recursive",
     "update:eslint-docs": "eslint-doc-generator"
   },
-  "dependencies": {
-    "@typescript-eslint/parser": "^8.0.0-alpha.14"
-  },
   "devDependencies": {
-    "@eslint/js": "^9.3.0",
-    "eslint": "^9.3.0",
+    "@eslint/compat": "^1.1.1",
+    "angular-eslint": "^18.3.1",
+    "eslint": "^9.11.0",
     "eslint-doc-generator": "^1.7.1",
-    "eslint-plugin-eslint-plugin": "^6.1.0",
-    "globals": "^15.3.0",
-    "mocha": "^10.4.0",
+    "eslint-plugin-deprecation": "^3.0.0",
+    "eslint-plugin-eslint-plugin": "^6.2.0",
+    "globals": "^15.9.0",
+    "mocha": "^10.7.3",
     "npm-run-all": "^4.1.5",
-    "typescript-eslint": "^8.0.0-alpha.14"
+    "typescript-eslint": "^8.6.0"
   },
   "engines": {
     "node": ">= 20.0.0"
   },
   "peerDependencies": {
+    "@eslint/js": "^9.11.0",
     "eslint": ">=9",
+    "eslint-plugin-import": "^2.30.0",
     "eslint-plugin-import-newlines": "^1.4.0"
+  },
+  "overrides": {
+    "eslint-plugin-deprecation": {
+      "eslint": ">=9"
+    },
+    "eslint-plugin-import": {
+      "eslint": ">=9"
+    }
   }
 }

@@ -16,16 +16,29 @@ Next, install `eslint-plugin-blackcomb-defaults` and required dependencies:
 npm install eslint-plugin-blackcomb-defaults eslint-plugin-import eslint-plugin-import-newlines --save-dev
 ```
 
+As the "import" plugins officially don't support ESLint 9, the respective dependency must be overridden in the package.json:
+
+```json
+  "overrides": {
+    "eslint-plugin-deprecation": {
+      "eslint": ">=9"
+    },
+    "eslint-plugin-import": {
+      "eslint": ">=9"
+    }
+  }
+```
+
 When using the typescript config, you will also need to install:
 
 ```sh
-npm install @typescript-eslint/eslint-plugin eslint-import-resolver-typescript eslint-plugin-deprecation --save-dev
+npm install typescript-eslint eslint-plugin-deprecation @eslint/compat --save-dev
 ```
 
 When using the angular config, you will also need to install:
 
 ```sh
-npm install @angular-eslint/eslint-plugin @angular-eslint/eslint-plugin-template @angular-eslint/template-parser --save-dev
+npm install angular-eslint --save-dev
 ```
 
 ## Usage
