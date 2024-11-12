@@ -4,9 +4,11 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 import javascript from './lib/configs/javascript.js';
+import typescript from './lib/configs/typescript.js';
 
 export default tseslint.config(
   ...javascript,
+  ...typescript,
   eslintPlugin.configs['flat/recommended'],
   {
     name: 'blackcomb-defaults project base',
@@ -18,7 +20,7 @@ export default tseslint.config(
     rules: {
       'quote-props': ['error', 'consistent-as-needed'],
       'quotes': ['error', 'single']
-    },
+    }
   },
   {
     name: 'blackcomb-defaults project tests',
