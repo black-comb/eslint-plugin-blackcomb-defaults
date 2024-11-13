@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-blackcomb-defaults",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "blackcomb eslint rules",
   "keywords": [
     "eslint",
@@ -22,7 +22,12 @@
   },
   "type": "module",
   "main": "./lib/index.js",
-  "exports": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./angular": "./lib/configs/angular.js",
+    "./javascript": "./lib/configs/javascript.js",
+    "./typescript": "./lib/configs/typescript.js"
+  },
   "files": [
     "lib",
     "LICENSE",
