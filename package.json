@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-blackcomb-defaults",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "blackcomb eslint rules",
   "keywords": [
     "eslint",
@@ -25,29 +25,23 @@
   "exports": "./lib/index.js",
   "files": [
     "lib",
-    "eslint.config.js",
     "LICENSE",
     "package.json",
     "README.md"
   ],
   "scripts": {
-    "lint": "npm-run-all \"lint:*\"",
-    "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
-    "lint:js": "eslint .",
-    "test": "mocha tests --recursive",
-    "update:eslint-docs": "eslint-doc-generator"
+    "lint": "eslint .",
+    "test": "mocha tests --recursive"
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.2",
     "@types/eslint__js": "^8.42.3",
     "angular-eslint": "^18.4.0",
     "eslint": "^9.14.0",
-    "eslint-doc-generator": "^1.7.1",
     "eslint-plugin-deprecation": "^3.0.0",
     "eslint-plugin-eslint-plugin": "^6.2.0",
     "globals": "^15.12.0",
     "mocha": "^10.8.2",
-    "npm-run-all": "^4.1.5",
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.14.0"
   },

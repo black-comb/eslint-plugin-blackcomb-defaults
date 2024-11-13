@@ -37,14 +37,63 @@ if ('no-constant-condition') {
 const spaceInfixOps = 4+3;
 
 // eslint-disable-next-line @stylistic/function-paren-newline
-function functionParenNewline(p1: string,
+function functionParenNewline1(p1: string,
   p2: number
 ) {
   return 4;
 }
 
+function functionParenNewline2(
+  p1: string
+): void {
+  // Nothing.
+}
+
 // eslint-disable-next-line @stylistic/function-call-spacing
-const funcCallSpacing = functionParenNewline ('a', 42);
+const funcCallSpacing = functionParenNewline1 ('a', 42);
 
 // eslint-disable-next-line @stylistic/no-extra-semi
 const noExtraSemi = 4; ;
+
+// eslint-disable-next-line @stylistic/generator-star-spacing
+function *generatorStarSpacing(x: number): IterableIterator<number, void, number> {
+  // eslint-disable-next-line @stylistic/no-extra-parens
+  const noExtraParens1 = yield (x);
+  const noExtraParens2 = x || (noExtraParens1 && 2);
+}
+
+// eslint-disable-next-line @stylistic/arrow-parens
+const arrowParens: (input: number) => number = input => input + 1;
+
+// eslint-disable-next-line @stylistic/max-len
+// Long comment. Long comment. Long comment. Long comment. Long comment. Long comment. Long comment. Long comment. Long comment. Long comment. Long comment. Long comment. Long comment. Long comment.AB.
+
+const noConfusingArrow: (a: boolean) => number = (a) => a ? 2 : 3;
+
+type IndentForTernary<T> =
+  T extends Record<number, number>
+    ? (number | {
+      a: string;
+    })
+    : 2;
+
+// This is accepted only due to a workaround for @stylistic/indent (ignoredNodes: ['VariableDeclarator > * > *']).
+const indentForFunctionType:
+  () => number | undefined =
+  () => 3;
+
+const indentForPrimitiveType: number | undefined =
+/// eslint-disable-next-line @stylistic/indent -- Currently not working due to the workaround for indentForFunctionType.
+3;
+
+const operatorLineBreak =
+  5;
+
+const indentBinaryOps =
+  noConfusingArrow(true)
+  && noConfusingArrow(false)
+    // eslint-disable-next-line @stylistic/indent-binary-ops
+    && noConfusingArrow(false);
+
+/// eslint-disable-next-line ??? -- No rule for spacing around generics.
+type ParensSpacing<T > = Record<string, T>;
