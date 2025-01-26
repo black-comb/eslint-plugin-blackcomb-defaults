@@ -95,5 +95,8 @@ const indentBinaryOps =
     // eslint-disable-next-line @stylistic/indent-binary-ops
     && noConfusingArrow(false);
 
-/// eslint-disable-next-line ??? -- No rule for spacing around generics.
-type ParensSpacing<T > = Record<string, T>;
+// eslint-disable-next-line @stylistic/type-generic-spacing
+type TypeGenericSpacing<T > = Record<string, T>;
+
+/// eslint-disable-next-line ??? -- No rule for spacing in generic instantiation.
+type TypeGenericInstantiationSpacing<T> = Record<string, T >;

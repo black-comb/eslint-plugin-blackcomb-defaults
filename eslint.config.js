@@ -9,6 +9,7 @@ import typescript from './lib/configs/typescript.js';
 export default tseslint.config(
   ...javascript,
   ...typescript,
+  // @ts-expect-error -- Import does not provide correct types.
   eslintPlugin.configs['flat/recommended'],
   {
     name: 'blackcomb-defaults project base',
