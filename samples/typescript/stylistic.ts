@@ -100,3 +100,9 @@ type TypeGenericSpacing<T > = Record<string, T>;
 
 /// eslint-disable-next-line ??? -- No rule for spacing in generic instantiation.
 type TypeGenericInstantiationSpacing<T> = Record<string, T >;
+
+// eslint-disable-next-line @stylistic/semi-spacing
+const semiSpacing = 3 ;
+
+/// eslint-disable-next-line ??? -- No rule for semi-spacing for type definitions.
+type TypeScriptSemiSpacing = number ;
