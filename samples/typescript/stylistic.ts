@@ -98,11 +98,11 @@ const indentBinaryOps =
 // eslint-disable-next-line @stylistic/type-generic-spacing
 type TypeGenericSpacing<T > = Record<string, T>;
 
-/// eslint-disable-next-line ??? -- No rule for spacing in generic instantiation.
+// eslint-disable-next-line @stylistic/type-generic-spacing
 type TypeGenericInstantiationSpacing<T> = Record<string, T >;
 
 // eslint-disable-next-line @stylistic/semi-spacing
 const semiSpacing = 3 ;
 
-/// eslint-disable-next-line ??? -- No rule for semi-spacing for type definitions.
+// eslint-disable-next-line @stylistic/semi-spacing
 type TypeScriptSemiSpacing = number ;
