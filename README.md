@@ -7,7 +7,7 @@ blackcomb eslint rules
 You'll first need to install [ESLint](https://eslint.org/):
 
 ```sh
-npm i eslint --save-dev
+npm install eslint --save-dev
 ```
 
 Next, install `eslint-plugin-blackcomb-defaults` and required dependencies:
