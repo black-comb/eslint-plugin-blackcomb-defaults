@@ -80,11 +80,25 @@ type IndentForTernary<T> =
 // This is accepted only due to a workaround for @stylistic/indent (ignoredNodes: ['VariableDeclarator > * > *']).
 const indentForFunctionType:
   () => number | undefined =
-  () => 3;
+    () => 3;
 
 const indentForPrimitiveType: number | undefined =
-/// eslint-disable-next-line @stylistic/indent -- Currently not working due to the workaround for indentForFunctionType.
-3;
+  3;
+
+const indentForPrimitiveType2:
+  number | undefined =
+    3;
+
+function indentForSwitchCase(): void {
+  switch (4 as number) {
+    case 1:
+      return;
+    case 4:
+      break;
+    default:
+      break;
+  }
+}
 
 const operatorLineBreak =
   5;
