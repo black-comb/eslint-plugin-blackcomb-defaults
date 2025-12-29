@@ -1,12 +1,12 @@
 // @ts-check
 import eslintPlugin from 'eslint-plugin-eslint-plugin';
 import globals from 'globals';
-import tseslint from 'typescript-eslint';
 
 import javascript from './lib/configs/javascript.js';
 import typescript from './lib/configs/typescript.js';
+import { defineConfig } from 'eslint/config';
 
-export default tseslint.config(
+export default defineConfig(
   ...javascript,
   ...typescript,
   eslintPlugin.configs.recommended,

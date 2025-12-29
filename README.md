@@ -54,10 +54,10 @@ Add the desired `blackcomb-defaults` configuration to your flat `eslint.config.j
 
 ```js
 // @ts-check
-import tseslint from 'typescript-eslint';
+import { defineConfig } from 'eslint/config';
 import blackcombDefaults from 'eslint-plugin-blackcomb-defaults';
 
-export default tseslint.config(
+export default defineConfig(
   ...blackcombDefaults.configs.typescript,
   // ... Your other configs.
 );
