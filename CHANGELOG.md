@@ -1,3 +1,11 @@
+# 03.01.2026: v2.1.2
+
+* javascript rules: Define max-len property for import-newlines/enforce to align with @stylistic/max-len.
+
+# 31.12.2025: v2.1.1
+
+* Restrict configurations to the respective file types.
+
 # 07.09.2025: v2.1.0
 
 * ESLint configs are now created using the defineConfig helper function from eslint/config instead of config from typescript-eslint.
