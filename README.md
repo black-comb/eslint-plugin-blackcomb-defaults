@@ -29,17 +29,7 @@ As the "import" plugin does not officially support ESLint 9, the respective depe
 When using the typescript config, you will also need to install:
 
 ```sh
-npm install typescript-eslint eslint-plugin-deprecation @eslint/compat --save-dev
-```
-
-As the "deprecation" plugin does not officially support ESLint 9, the respective dependency must be overridden in the package.json:
-
-```json
-  "overrides": {
-    "eslint-plugin-deprecation": {
-      "eslint": ">=9"
-    }
-  }
+npm install typescript-eslint @eslint/compat --save-dev
 ```
 
 When using the angular config, you will also need to install:
