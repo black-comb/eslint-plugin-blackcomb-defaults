@@ -1,3 +1,7 @@
+# 14.02.2026: v2.2.0
+
+* Removed dependency to eslint-plugin-deprecation. Used @typescript-eslint/no-deprecated instead.
+
 # 03.01.2026: v2.1.2
 
 * javascript rules: Define max-len property for import-newlines/enforce to align with @stylistic/max-len.
